@@ -1,24 +1,20 @@
-pip install yfinance
+#QUESTION 1
 
 import yfinance as yf
 import pandas as pd
 
-# Fetch Tesla stock data
 gme_stock = yf.Ticker("GME")
-
-# Download historical stock data
 gme_data = gme_stock.history(period="max")
-
-# Display the downoaded data
 gme_data.head()
 
 
+#QUESTION 2
 
 import pandas as pd
 import requests
 from bs4 import BeautifulSoup
 
-url = "https://www.macrotrends.net/stocks/charts/GME/gamestop/revenue"
+url = "https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMDeveloperSkillsNetwork-PY0220EN-SkillsNetwork/labs/project/stock.html"
 
 html_data  = requests.get(url).text
 
